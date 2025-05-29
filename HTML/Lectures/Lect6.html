@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 6: Forms</title>
+</head>
+<body>
+
+  <h1>LECTURE 6: FORMS</h1>
+
+<h3>Cruzado, Jan Marlain V.</h3>
+
+  <h2>1. Text Input</h2>
+  <form>
+    <label>Enter text: <input type="text"></label>
+  </form>
+
+  <h2>2. Text Input with Submit Button</h2>
+  <form>
+    <label>Search: <input type="text" name="search"></label>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <h2>3. Action</h2>
+  <form action="https://example.com/submit">
+    <input type="text" name="data">
+    <br>
+    <br>
+    <input type="submit" value="Send to example.com">
+  </form>
+
+  <h2>4. Method Attribute</h2>
+  <form action="/submit" method="post">
+    <label>Username: <input type="text" name="username"></label>
+    <br>
+    <br>
+    <input type="submit" value="Submit with POST">
+  </form>
+
+  <h2>5. Name Attribute</h2>
+  <form>
+    <label>Email: <input type="email" name="user_email"></label>
+    <input type="submit" value="Submit">
+  </form>
+
+  <h2>6. Radio Buttons</h2>
+  <p>Same name:</p>
+  <form>
+    <label><input type="radio" name="gender" value="male"> Male</label><br>
+    <label><input type="radio" name="gender" value="female"> Female</label><br>
+    <label><input type="radio" name="gender" value="other"> Other</label>
+  </form>
+
+  <p>Different names:</p>
+  <form>
+    <label><input type="radio" name="color1" value="red"> Red</label><br>
+    <label><input type="radio" name="color2" value="blue"> Blue</label><br>
+    <label><input type="radio" name="color3" value="green"> Green</label>
+  </form>
+
+  <h2>7. Checkbox</h2>
+  <form>
+    <label><input type="checkbox" name="subscribe">I Have a bike</label><br>
+    <label><input type="checkbox" name="terms">I Have a car</label><br>
+    <label><input type="checkbox" name="terms">I Have an M18 Hellcat</label><br>
+    <label><input type="checkbox" name="terms">I Have a A-140</label><br>
+  </form>
+
+  <h2>8. Input Type Color</h2>
+  <form>
+    <label>Choose color: <input type="color" name="favcolor"></label>
+  </form>
+
+  <h2>9. Different Input Types</h2>
+  <form>
+    <p><label>Date: <input type="date" name="birthdate"></label></p>
+    <p><label>Number: <input type="number" name="quantity" min="1" max="10"></label></p>
+    <p><label>Password: <input type="password" name="pass"></label></p>
+    <p><label>Email: <input type="email" name="email"></label></p>
+    <p><label>URL: <input type="url" name="website"></label></p>
+    <p><label>Range: <input type="range" name="volume" min="0" max="100"></label></p>
+    <p><label>Time: <input type="time" name="alarm"></label></p>
+    <p><label>File: <input type="file" name="upload"></label></p>
+    <p><label>Tel: <input type="tel" name="phone"></label></p>
+    <p><label>Search: <input type="search" name="query"></label></p>
+  </form>
+
+  <h2>10. Input with Different Attributes</h2>
+  <form>
+    <label>Username (required, maxlength=10): 
+        <br>
+      <input type="text" name="username" required maxlength="10">
+    </label><br>
+
+    <label>Password (minlength=6): 
+        <br>
+      <input type="password" name="password" minlength="6">
+    </label><br>
+
+    <label>Age (step=5): 
+        <br>
+      <input type="number" name="age" step="5">
+    </label><br>
+
+    <label>Email (autocomplete off): 
+        <br>
+      <input type="email" name="email" autocomplete="off">
+    </label><br>
+    <br>
+    <br>
+    <input type="submit" value="Submit Form">
+  </form>
+
+</body>
+</html>

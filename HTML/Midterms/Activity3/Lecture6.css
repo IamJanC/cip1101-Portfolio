@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+h1{
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+     font-weight: 400;
+    font-style: normal;
+}
+
+p, a {
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.image-container {
+    display: flex;
+    gap: 20px;
+}
+
+#No1-Border-Image {
+    border: 2px solid black;
+}
+
+#No1-Border-Image-None {
+    border: 2px solid black;
+    height: 683px;
+    width: 484px;
+    object-fit: cover;
+    display: block;
+}
+
+#No2-Specified-Size {
+    height: 5in;
+    width: 5in;
+}
+
+#No3-Rounded-Borders {
+    border: 5px solid #a09c84;
+    border-radius: 25px;
+}
+
+#No4-Specified-Rounded-Borders {
+    border: 5px solid #e84940;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#No6-Float-Image{
+    float: right;
+    margin-left: 25px;
+}
+
+#No7-Hover-Image{
+    width: 25%;
+    height: auto;
+}
+
+#No7-Hover-Image:hover{
+    width: 26%;
+    height: auto;
+}
+
+#No8-Box-Shadow-Effect{
+    box-shadow: 25px 15px rgb(128, 127, 127);
+}
+
+.No9-Circle-Shaped {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+    margin-right: 15px;
+}
+
+.No10-Ellipse-Shaped {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    clip-path: ellipse(40% 50%);
+    shape-outside: ellipse(45% 50%);
+}
+
+#No11-Masked-Image {
+    height: auto; /* Keep aspect ratio */
+    
+    /* Apply mask */
+    -webkit-mask-image: url(Name.png);
+    mask-image: url(Name.png);
+    
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    -webkit-mask-size: contain; /* Adjust size */
+    mask-size: contain;
+    
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+#No12-13-Image-Map{
+    width: 70%;
+    height: auto;
+    display: block;
+}
+
+
+.content {
+    display: block;
+    width: 50%;  /* Adjust width as needed */
+    margin: 0 auto;  /* This centers it horizontally */
+    text-align: center;
+}
+
+.Six-content {
+    display: block;
+    width: 50%;  /* Adjust width as needed */
+    margin: 0 auto;  /* This centers it horizontally */
+    text-align: justify;
+}
+
+.Six-content p{
+    font-family: "Zain", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.code {
+    font-family: monospace;  /* Makes it look like code */
+    background-color: #f4f4f4;  /* Light gray background */
+    padding: 2px 5px;  /* Small padding for better spacing */
+    border-radius: 4px;  /* Slightly rounded corners */
+    color: #d63384;  /* Optional: A color to make it stand out */
+    font-size: 15px;  /* Makes it 85% of the normal text size */
+}
+

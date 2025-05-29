@@ -1,0 +1,60 @@
+body {
+
+    background-image: url('https://wallpapers.com/images/hd/dark-academia-mansion-hall-ichk32oggtwti6xm.jpg');
+    background-repeat: no-repeat;
+    background-position: right-top;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 1;  
+    z-index: -1; 
+
+    /*background: #ffffff url('https://wallpapers.com/images/hd/dark-academia-mansion-hall-ichk32oggtwti6xm.jpg') no-repeat right top;*/
+}
+
+h1 {
+    color: rgba(62, 54, 46, 1);
+    margin-left: 20px
+}
+
+pre{
+    color: #AC8968;
+}
+
+#CD {
+    animation: rotateAnimation 10s linear infinite; /* Rotates 360° every 3 seconds */
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+p.dotted {
+    color : #AC8968;
+    border: 2px dotted rgb(172, 137, 104) ;
+    padding: 5px;
+
+}
+
+p.solid {
+    color : #AC8968;
+    border: 2px solid rgb(172, 137, 104) ;
+    padding: 5px;
+
+}
+
+p.dashed {
+    color : #AC8968;
+    border: 2px dashed rgb(172, 137, 104) ;
+    padding: 5px;
+
+}
+
+h3{
+  color: 	rgba(172,137,104,1.000);   
+}
+

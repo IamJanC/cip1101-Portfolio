@@ -1,0 +1,363 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lilita+One&family=Outfit:wght@100..900&display=swap');
+
+html{
+    scroll-behavior: smooth; /* Ensure smooth scrolling */
+}
+/* The Global Ones */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.personality-info h1 {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150px;
+    color: #fcf3f3;
+}
+
+.abbreviation h3 {
+    background-color: #0000003a;
+    padding: 10px;
+    border-radius: 5px;
+
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #fcf3f3;
+
+}
+
+#diplomats-abbr h3{
+    background-color: #698f7e;
+}
+
+#sentinels-abbr h3{
+    background-color: #6a858e;
+}
+
+#explorers-abbr h3{
+    background-color: #a09172;
+}
+
+
+.description h2{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #2b2828;
+}
+
+.description p {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #2b2828;
+}
+
+.strengths h3 {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+}
+
+.strengths p{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #2b2828;
+}
+
+.weakness p{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #2b2828;
+}
+
+
+.body-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Side Bar (Left Side) */
+.sidebar {
+    height: 100vh;
+    width: 25%;
+    min-width: 250px;
+    max-width: 350px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    align-items: center;
+
+    
+    overflow-y: auto; /* ✅ Enable vertical scrolling */
+    overflow-x: hidden; /* Optional: prevent horizontal scroll */
+}
+
+
+
+
+.category-label {
+    font-weight: bold;
+    color: #949292;
+    padding: 8px 0 4px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    pointer-events: none; /* Makes sure it doesn’t behave like a link */
+    cursor: default;
+
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+/* Sidebar Navbar Styling */
+.sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.sidebar li {
+    margin: 1rem 0; /* Spacing between items */
+}
+
+.sidebar a {
+    text-decoration: none; 
+    color: #444; /* Default color */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition */
+
+
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.sidebar a:hover {
+    color: #007BFF; /* Hover color */
+    transform: scale(1.1); /* Slightly enlarge the link */
+}
+
+.sidebar a.active {
+    color: #FF6347; /* Active link color */
+    text-decoration: underline;
+}
+
+
+
+.website-title{
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+
+/* Main Content (Right Side) */
+.content{ 
+    flex-grow: 1;
+}
+
+/* Main Content (Cards) */
+.dichotomy {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dichotomy-left, .dichotomy-right {
+    width: 48%;
+}
+
+/* Personality Parent Container */
+.personality-container {
+    display: flex;
+    justify-content: center;  /* Center horizontally within the container */
+    align-items: center;      /* Center vertically within the container */
+    gap: 20px;                /* Optional: space between the image and text */
+    width: 100%;              /* Ensure the container spans the full width */
+    max-width: 1600px;
+}
+  
+/* SVG */
+.personality-image {
+    flex: 50%;
+    justify-content: center;  /* Center the image horizontally */
+    align-items: center;      /* Center the image vertically */
+}
+  
+.personality-image img {
+    width: auto;  /* Allow width to scale automatically */
+    height: 100vh;  /* Set a specific height for the image */
+    max-width: 100%;  /* Prevent the image from overflowing */
+}
+
+/* Information */
+.personality-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.personality-info {
+    flex: 50%;
+    padding-right: 25px;
+}
+
+.abbreviation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.description-title{
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.description{
+    text-align: justify;
+    margin-bottom: 5vh;
+}
+
+.strengths {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.weakness {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers both icon and text */
+  text-align: center;
+  width: 100px; /* adjust as needed */
+}
+
+.icon-container {
+  width: 135px;
+  height: 135px;
+  background-color: #95637a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0.5rem; /* space between icon and label */
+}
+
+
+.icon-container img {
+  width: 60%;
+  height: auto;
+}
+
+.icon-container-diplomat {
+  width: 135px;
+  height: 135px;
+  background-color: #728c56;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0.5rem; /* space between icon and label */
+}
+
+.icon-container-diplomat img {
+  width: 60%;
+  height: auto;
+}
+
+.icon-container-sentinels {
+    width: 135px;
+    height: 135px;
+    background-color: #6a858e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0.5rem; /* space between icon and label */
+}
+  
+.icon-container-sentinels img {
+    width: 60%;
+    height: auto;
+}
+
+.icon-container-explorers {
+    width: 135px;
+    height: 135px;
+    background-color: #bda15c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0.5rem; /* space between icon and label */
+}
+  
+.icon-container-explorers img {
+    width: 60%;
+    height: auto;
+}
+  
+
+
+  
+/* Background Color */
+#analysts {
+    background-color: #bd90a9;
+}
+
+#diplomats {
+    background-color: #96ceb7;
+}
+
+#sentinels{
+    background-color: #9ac1ce;
+}
+#explorers{
+    background-color: #e6d0a4;
+}
+  
+
+
+/* TEMPORARY FOR VISUALIZATION */
+
+
+

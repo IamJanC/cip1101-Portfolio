@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Lexend+Tera:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #1c1c20;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px 10px 25px; /* Adjust padding as needed */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px; /* Adjust spacing between links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+nav #current{
+    color: rgb(206, 62, 62);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ddd5d5;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(202, 127, 127);
+}
+
+nav h1{
+    font-family: "Gaegu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ddd5d5;
+}
+
+nav span{
+    color: rgb(206, 62, 62);
+    padding: 0;
+}
+
+.thank-you-container {
+    text-align: center;
+    margin-top: 100px;
+    color: #ddd5d5;
+}
+
+.thank-you-container h1{
+    font-family: "Lexend Tera", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 150px;
+    white-space: nowrap; 
+    padding: 0;
+    margin: 50px;
+}
+
+.thank-you-container span{
+    color: rgb(206, 62, 62);
+}
+
+.thank-you-container p{
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 0;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(206, 62, 62);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+.btn:hover {
+    background-color: rgb(202, 127, 127);
+}

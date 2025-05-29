@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 4: HTML Lists</title>
+  <style>
+    /* Unordered list with CSS */
+    .circle-list {
+      list-style-type: circle;
+    }
+
+    /* Unordered list with 2 CSS rules */
+    .nested-list {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+
+    .nested-list ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    /* You can add more CSS here */
+  </style>
+</head>
+<body>
+
+  <h1>Lecture 4: HTML Lists</h1>
+
+  <h2>Ordered Lists</h2>
+  <ol>
+    <li>item 1</li>
+    <li>item 2</li>
+  </ol>
+
+  <h2>Ordered List - with CSS list-style-type:</h2>
+
+  <h3>Decimal List</h3>
+  <ol type="1">
+    <li>Notebook</li>
+    <li>Ballpen</li>
+    <li>Yellow Paper</li>
+    <li>Bag</li>
+    <li>Pencil</li>
+  </ol>
+
+  <h3>Upper-alpha List</h3>
+  <ol type="A">
+    <li>Notebook</li>
+    <li>Ballpen</li>
+    <li>Yellow Paper</li>
+    <li>Bag</li>
+    <li>Pencil</li>
+  </ol>
+
+  <h3>Lower-alpha List</h3>
+  <ol type="a">
+    <li>Notebook</li>
+    <li>Ballpen</li>
+    <li>Yellow Paper</li>
+    <li>Bag</li>
+    <li>Pencil</li>
+  </ol>
+
+  <h3>Upper-roman List</h3>
+  <ol type="I">
+    <li>Notebook</li>
+    <li>Ballpen</li>
+    <li>Yellow Paper</li>
+    <li>Bag</li>
+    <li>Pencil</li>
+  </ol>
+
+  <h3>Lower-roman List</h3>
+  <ol type="i">
+    <li>Notebook</li>
+    <li>Ballpen</li>
+    <li>Yellow Paper</li>
+    <li>Bag</li>
+    <li>Pencil</li>
+  </ol>
+
+  <h2>Unordered List</h2>
+  <ul>
+    <li>Notebook</li>
+    <li>Ballpen</li>
+    <li>Yellow Paper</li>
+    <li>Bag</li>
+    <li>Pencil</li>
+  </ul>
+
+  <h2>Unordered List - with CSS</h2>
+  <ul class="circle-list">
+    <li>Notebook</li>
+    <li>Ballpen</li>
+    <li>Yellow Paper</li>
+    <li>Bag</li>
+    <li>Pencil</li>
+  </ul>
+
+  <h2>Unordered List - with 2 CSS</h2>
+  <ul class="nested-list">
+    <li>First Item
+      <ul>
+        <li>sub point</li>
+        <li>another sub point</li>
+      </ul>
+    </li>
+    <li>Second Item
+      <ul>
+        <li>sub point</li>
+        <li>another sub point</li>
+      </ul>
+    </li>
+    <li>Third Item
+      <ul>
+        <li>sub point</li>
+        <li>another sub point</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+</html>

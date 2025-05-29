@@ -1,0 +1,1325 @@
+<!--CoStarAstrology-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>16 MBTI Personalities Final</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+            const sections = document.querySelectorAll('section');
+        
+            // Set up IntersectionObserver
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.getAttribute('id');
+                            
+                            // Remove active class from all links
+                            sidebarLinks.forEach(link => {
+                                link.classList.remove('active');
+                            });
+                            
+                            // Add active class to the corresponding link
+                            const matchingLink = document.querySelector(`.sidebar a[href="#${id}"]`);
+                            if (matchingLink) {
+                                matchingLink.classList.add('active');
+                            }
+                        }
+                    });
+                },
+                { threshold: 0.5 } // Trigger when 50% of the section is visible
+            );
+        
+            // Observe all sections
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+        </script>
+    
+    <div class="body-container">
+
+        <!--!! SIDEBAR !!-->
+        <nav class="sidebar">
+            <ul>
+                <li class="category-label">Analysts</li>
+                <li><a href="#intj">INTJ</a></li>
+                <li><a href="#intp">INTP</a></li>
+                <li><a href="#entj">ENTJ</a></li>
+                <li><a href="#entp">ENTP</a></li>
+        
+                <li class="category-label">Diplomats</li>
+                <li><a href="#infj">INFJ</a></li>
+                <li><a href="#infp">INFP</a></li>
+                <li><a href="#enfj">ENFJ</a></li>
+                <li><a href="#enfp">ENFP</a></li>
+        
+                <li class="category-label">Sentinels</li>
+                <li><a href="#istj">ISTJ</a></li>
+                <li><a href="#isfj">ISFJ</a></li>
+                <li><a href="#estj">ESTJ</a></li>
+                <li><a href="#esfj">ESFJ</a></li>
+        
+                <li class="category-label">Explorers</li>
+                <li><a href="#istp">ISTP</a></li>
+                <li><a href="#isfp">ISFP</a></li>
+                <li><a href="#estp">ESTP</a></li>
+                <li><a href="#esfp">ESFP</a></li>
+            </ul>
+        </nav>
+        
+
+        <!-- !! MAIN !! -->
+        <main class="content">
+            <section id="analysts">
+                <section id="intj" class="personality">
+                    <div class="personality-container">
+
+                        <div class="personality-image">
+                          <!-- You can insert an SVG or icon here -->
+                          <img src="IMAGES/INTJ.svg" alt="INTJ Icon">
+                        </div>
+
+                        <div class="personality-info">
+                            <div class="personality-title">
+                                <h1>INTJ</h1>
+
+                                <div class="abbreviation">
+                                  <h3>Introverted</h3>
+                                  <h3>Intuitive</h3>
+                                  <h3>Thinking</h3>
+                                  <h3>Judging</h3>
+                                </div>
+                            </div>
+                            
+                            <div class="description">
+                              <div class="description-title">
+                                <h2>The Architect</h2>
+                              </div>
+
+                              <p>Strategic, logical, and fiercely independent, INTJs are deep thinkers who thrive on solving complex problems and creating effective systems. They possess original minds and a strong drive to turn their ideas into reality, often setting ambitious goals and relentlessly pursuing them. Known for their ability to spot patterns in the world around them, INTJs excel at forming long-term strategies and insightful perspectives. Once committed to a task, they bring structure, focus, and determination to see it through. Their skeptical nature and high standards push them—and those around them—toward excellence.</p>
+                            </div>
+                            
+                      
+                            <!-- Strengths Section -->
+                            <div class="strengths">
+                              <div class="item">
+                                <div class="icon-container">
+                                  <img src="IMAGES/Puzzle.png" alt="Icon">
+                                </div>
+                                <p>Strategic & Rational</p>
+                              </div>
+                              <div class="item">
+                                <div class="icon-container">
+                                  <img src="IMAGES/Curious2.png" alt="Icon">
+                                </div>
+                                <p>Curious</p>
+                              </div>
+                              <div class="item">
+                                <div class="icon-container">
+                                  <img src="IMAGES/Determined.png" alt="Icon">
+                                </div>
+                                <p>Determined</p>
+                              </div>
+                            </div>
+
+                            <!-- Weakness Section -->
+                            <div class="weakness">
+                              <div class="item">
+                                <div class="icon-container">
+                                  <img src="IMAGES/arrogant.png " alt="Icon">
+                                </div>
+                                <p>Arrogant</p>
+                              </div>
+                              <div class="item">
+                                <div class="icon-container">
+                                  <img src="IMAGES/dismissive.png" alt="Icon">
+                                </div>
+                                <p>Dismissive of Emotions</p>
+                              </div>
+                              <div class="item">
+                                <div class="icon-container">
+                                  <img src="IMAGES/clueless.png" alt="Icon">
+                                </div>
+                                <p>Socially Clueless</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <section id="intp" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/INTP.svg" alt="INTJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1>INTP</h1>
+
+                            <div class="abbreviation">
+                              <h3>Introverted</h3>
+                              <h3>Intuitive</h3>
+                              <h3>Thinking</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Logician</h2>
+                          </div>
+
+                          <p>INTPs, also known as Logicians, are driven by a deep curiosity and a sharp, analytical mind. They see the world through a unique lens, constantly questioning, exploring, and untangling its mysteries. It's no wonder that many great philosophers and scientists throughout history have shared this personality type. Naturally drawn to solitude, INTPs often find their richest ideas when lost in thought. Creative and endlessly inventive, they embrace their unconventional thinking and aren’t afraid to stand apart from the crowd.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/analytical.png" alt="Icon">
+                            </div>
+                            <p>Analytical</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/Open-Minded.png" alt="Icon">
+                            </div>
+                            <p>Open-Minded</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/honest.png" alt="Icon">
+                            </div>
+                            <p>Honest</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/overthinking.png " alt="Icon">
+                            </div>
+                            <p>Overthinker</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/Impatient.png" alt="Icon">
+                            </div>
+                            <p>Impatient</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/dissatisfaction.png" alt="Icon">
+                            </div>
+                            <p>Dissatisfied</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            
+                <section id="entj" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ENTJ.svg" alt="ENTJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1>ENTJ</h1>
+
+                            <div class="abbreviation">
+                              <h3>Extroverted</h3>
+                              <h3>Intuitive</h3>
+                              <h3>Thinking</h3>
+                              <h3>Judging</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Commander</h2>
+                          </div>
+
+                          <p>ENTJs, known as Commanders, are natural-born leaders who thrive on ambition, structure, and results. With a powerful blend of charisma and confidence, they inspire others to rally behind a shared vision. Driven by logic and an unyielding determination, ENTJs approach their goals with strategic precision and an intense work ethic. While their bold, no-nonsense attitude can sometimes come across as forceful, it’s rooted in a deep commitment to excellence. With sharp minds and unwavering discipline, ENTJs are wired to lead, build, and achieve at the highest level.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/charismatic.png" alt="Icon">
+                            </div>
+                            <p>Charismatic & Inspiring</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/self-confidence.png" alt="Icon">
+                            </div>
+                            <p>Self-Confident</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/energy.png" alt="Icon">
+                            </div>
+                            <p>Energetic</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/dominant.png " alt="Icon">
+                            </div>
+                            <p>Stubborn & Dominant</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/anger.png" alt="Icon">
+                            </div>
+                            <p>Cold & Ruthless</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/Impatient.png" alt="Icon">
+                            </div>
+                            <p>Impatient</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            
+                <section id="entp" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ENTP.svg" alt="ENTP Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1>ENTP</h1>
+
+                            <div class="abbreviation">
+                              <h3>Extroverted</h3>
+                              <h3>Intuitive</h3>
+                              <h3>Thinking</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Debater</h2>
+                          </div>
+
+                          <p>Quick-witted and bold, ENTPs—aptly called Debaters—thrive on challenging ideas and questioning the status quo. They’re not just unafraid of disagreement—they welcome it, lighting up in the heat of spirited discussion. For ENTPs, few things are more exciting than a good intellectual debate, especially when it dances on the edge of controversy.
+
+                            But don’t mistake their contrarian streak for hostility. ENTPs are curious, clever, and often disarmingly funny. Their sharp minds and playful nature make them captivating conversationalists. For them, debate isn’t conflict—it’s a game, a way of exploring new perspectives and having a little fun along the way.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/idea.png" alt="Icon">
+                            </div>
+                            <p>Knowledgeable</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/charismatic.png" alt="Icon">
+                            </div>
+                            <p>Charismatic</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/energy.png" alt="Icon">
+                            </div>
+                            <p>Energetic</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/argue.png " alt="Icon">
+                            </div>
+                            <p>Very Argumentative</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/dismissive.png" alt="Icon">
+                            </div>
+                            <p>Insensitive</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container">
+                              <img src="IMAGES/bully (1).png" alt="Icon">
+                            </div>
+                            <p>Intolerant</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="diplomats">
+                <section id="infj" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/INFJ.svg" alt="INFJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="green">INFJ</h1>
+
+                            <div class="abbreviation" id="diplomats-abbr">
+                              <h3>Introverted</h3>
+                              <h3>Intuitive</h3>
+                              <h3>Feeling</h3>
+                              <h3>Judging</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Advocate</h2>
+                          </div>
+
+                          <p>Idealistic and principled, INFJs—known as Advocates—aren’t content to simply drift through life. They’re driven by a deep desire to help others and create meaningful change. Success, for them, isn’t measured by wealth or status, but by living with purpose and integrity.
+
+                            Though their dreams are lofty, INFJs are far from idle idealists. Grounded in strong values and guided by quiet determination, they strive to do what feels right—according to their own insight, not the world’s expectations.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/insight.png" alt="Icon">
+                            </div>
+                            <p>Insightful</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/brain.png" alt="Icon">
+                            </div>
+                            <p>Creative</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/passion.png" alt="Icon">
+                            </div>
+                            <p>Passionate</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/perfectionist.png " alt="Icon">
+                            </div>
+                            <p>Perfectionist</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/burnout.png" alt="Icon">
+                            </div>
+                            <p>Prone to Burnout</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/social-withdrawal.png" alt="Icon">
+                            </div>
+                            <p>Reluctant to Open Up</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="infp" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/INFP.svg" alt="INFP Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="green">INFP</h1>
+
+                            <div class="abbreviation" id="diplomats-abbr">
+                              <h3>Introverted</h3>
+                              <h3>Intuitive</h3>
+                              <h3>Feeling</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Mediator</h2>
+                          </div>
+
+                          <p>Though often quiet or reserved, INFPs—known as Mediators—have rich, passionate inner worlds. Deeply imaginative, they find joy in daydreams, stories, and the beauty of art, music, and nature. Their sensitivity runs deep, often making them sentimental and nostalgic, cherishing memories and keepsakes that stir the heart.
+
+                            Idealistic and empathetic, INFPs long for meaningful connections and a life of purpose. In a fast-paced world, they may feel out of place—but it’s their depth, creativity, and compassion that give them the power to touch others and inspire change.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/empathetic.png" alt="Icon">
+                            </div>
+                            <p>Empathetic</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/generousity.png" alt="Icon">
+                            </div>
+                            <p>Generous</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/idealistic.png" alt="Icon">
+                            </div>
+                            <p>Idealistic</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/unrealistic.png " alt="Icon">
+                            </div>
+                            <p>Unrealistic</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/self-critical.png" alt="Icon">
+                            </div>
+                            <p>Self-Critical</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/social-withdrawal.png" alt="Icon">
+                            </div>
+                            <p>Self-Isolating</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="enfj" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ENFJ.svg" alt="ENFJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="green">ENFJ</h1>
+
+                            <div class="abbreviation" id="diplomats-abbr">
+                              <h3>Extroverted</h3>
+                              <h3>Intuitive</h3>
+                              <h3>Feeling</h3>
+                              <h3>Judging</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Protagonist</h2>
+                          </div>
+
+                          <p>ENFJs are born leaders, which explains why these personalities can be found among many notable politicians, coaches, and teachers. Their passion and charisma allow them to inspire others not just in their careers but in every arena of their lives, including their relationships. Few things bring people with the ENFJ personality type a deeper sense of joy and fulfillment than guiding friends and loved ones to grow into their best selves.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/reliable.png" alt="Icon">
+                            </div>
+                            <p>Reliable</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/passion.png" alt="Icon">
+                            </div>
+                            <p>Passionate</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/charisma.png" alt="Icon">
+                            </div>
+                            <p>Charismatic</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/unrealistic.png " alt="Icon">
+                            </div>
+                            <p>Unrealistic</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/idealistic.png" alt="Icon">
+                            </div>
+                            <p>Overly Idealistic</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/empathetic.png" alt="Icon">
+                            </div>
+                            <p>Overly Empathetic</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="enfp" class="personality">
+                    <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ENFP.svg" alt="ENFP Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="green">ENFP</h1>
+
+                            <div class="abbreviation" id="diplomats-abbr">
+                              <h3>Extroverted</h3>
+                              <h3>Intuitive</h3>
+                              <h3>Feeling</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Campaigner</h2>
+                          </div>
+
+                          <p>People with the ENFP personality type (Campaigners) are true free spirits – outgoing, openhearted, and open-minded. With their lively, upbeat approach to life, ENFPs stand out in any crowd. But even though they can be the life of the party, they don’t just care about having a good time. These personalities have profound depths that are fueled by their intense desire for meaningful, emotional connections with others.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/Curious.png" alt="Icon">
+                            </div>
+                            <p>Curious</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/perception.png" alt="Icon">
+                            </div>
+                            <p>Perceptive</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/positive-review.png" alt="Icon">
+                            </div>
+                            <p>Good-Natured & Positive</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/unorganized.png " alt="Icon">
+                            </div>
+                            <p>Disorganized</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/optimistic.png" alt="Icon">
+                            </div>
+                            <p>Overly Optimistic</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-diplomat">
+                              <img src="IMAGES/restless.png" alt="Icon">
+                            </div>
+                            <p>Restless</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+            
+            <section id="sentinels">
+                <section id="istj" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ISTJ.svg" alt="ISTJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="blue">ISTJ</h1>
+
+                            <div class="abbreviation" id="sentinels-abbr">
+                              <h3>Introverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Thinking</h3>
+                              <h3>Judging</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Logistician</h2>
+                          </div>
+
+                          <p>ISTJs—Logisticians—are dependable, responsible, and true to their word. When they commit to something, they follow through with quiet determination and a strong sense of duty. With a deep respect for structure, tradition, and clear expectations, they thrive in environments where order and stability are valued.
+
+                            Though not attention-seeking, ISTJs play a vital role in holding things together—at work, in families, and in communities. Their practicality, consistency, and calm logic earn them lasting respect and trust.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/honest-blue.png" alt="Icon">
+                            </div>
+                            <p>Honest and Direct</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/calm.png" alt="Icon">
+                            </div>
+                            <p>Calm and Practical</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/organized.png" alt="Icon">
+                            </div>
+                            <p>Organized and Effective</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/stubborn.png" alt="Icon">
+                            </div>
+                            <p>Stubborn</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/judgement.png" alt="Icon">
+                            </div>
+                            <p>Judgmental</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/book.png" alt="Icon">
+                            </div>
+                            <p>Always by the Book</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="isfj" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ISFJ.svg" alt="ISTJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="blue">ISFJ</h1>
+
+                            <div class="abbreviation" id="sentinels-abbr">
+                              <h3>Introverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Feeling</h3>
+                              <h3>Judging</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Defender</h2>
+                          </div>
+
+                          <p>ISFJs—known as Defenders—are quiet caretakers who bring stability, warmth, and reliability to the world around them. Devoted and thoughtful, they go out of their way to support others, often remembering the little things—birthdays, traditions, and quiet acts of kindness—without ever asking for praise.
+
+                            Behind their humble demeanor lies a capable and detail-oriented mind. ISFJs combine sensitivity with strong analytical skills and surprising social insight, making them both compassionate and dependable in equal measure.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/hardworking.png" alt="Icon">
+                            </div>
+                            <p>Hardworking</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/observing.png" alt="Icon">
+                            </div>
+                            <p>Observant</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/support.png" alt="Icon">
+                            </div>
+                            <p>Supportive</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/humble.png " alt="Icon">
+                            </div>
+                            <p>Overly Humble</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/personal.png" alt="Icon">
+                            </div>
+                            <p>Taking Things Personally</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/isolation.png" alt="Icon">
+                            </div>
+                            <p>Repressing Their Feelings</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="estj" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ESTJ.svg" alt="ESTJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="blue">ESTJ</h1>
+
+                            <div class="abbreviation" id="sentinels-abbr">
+                              <h3>Extroverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Thinking</h3>
+                              <h3>Judging</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Executive</h2>
+                          </div>
+
+                          <p>People with the ESTJ personality type (Executives) are representatives of tradition and order, utilizing their understanding of what is right, wrong, and socially acceptable to bring families and communities together. Embracing the values of honesty and dedication, ESTJs are valued for their mentorship mindset and their ability to create and follow through on plans in a diligent and efficient manner. They will happily lead the way on difficult paths, and they won’t give up when things become stressful.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/honest-blue.png" alt="Icon">
+                            </div>
+                            <p>Direct and Honest</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/dedication.png" alt="Icon">
+                            </div>
+                            <p>Dedicated</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/loyal.png" alt="Icon">
+                            </div>
+                            <p>Loyal, Patient, and Reliable</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/judgement.png " alt="Icon">
+                            </div>
+                            <p>Judgmental</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/restless-blue.png" alt="Icon">
+                            </div>
+                            <p>Difficulty Relaxing</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/isolation.png" alt="Icon">
+                            </div>
+                            <p>Difficulty Expressing Emotion</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="esfj" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ESFJ.svg" alt="ESFJ Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="blue">ESFJ</h1>
+
+                            <div class="abbreviation" id="sentinels-abbr">
+                              <h3>Extroverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Feeling</h3>
+                              <h3>Judging</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Consul</h2>
+                          </div>
+
+                          <p>For ESFJs—Consuls—life feels most meaningful when it's shared. These warm, social personalities are often the heart of their communities, offering support, kindness, and connection wherever they go.
+
+                            They may not open up to everyone, but they form deep bonds with those who share their values. Guided by a strong sense of duty, ESFJs believe in the power of hospitality, respect, and tradition. Reliable and generous, they’re often the ones quietly holding families and communities together.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/loyal.png" alt="Icon">
+                            </div>
+                            <p>Very Loyal</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/social.png" alt="Icon">
+                            </div>
+                            <p>Good at Connecting with Others</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/dedication.png" alt="Icon">
+                            </div>
+                            <p>Strong Sense of Duty</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/social.png" alt="Icon">
+                            </div>
+                            <p>Worried about Their Social Status</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/personal.png" alt="Icon">
+                            </div>
+                            <p>Vulnerable to Criticism</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-sentinels">
+                              <img src="IMAGES/needy.png" alt="Icon">
+                            </div>
+                            <p>Often Too Needy</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+            
+            <section id="explorers">
+                <section id="istp" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ISTP.svg" alt="ISTP Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="yellow">ISTP</h1>
+
+                            <div class="abbreviation" id="explorers-abbr">
+                              <h3>Introverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Thinking</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Virtuoso</h2>
+                          </div>
+
+                          <p>People with the ISTP personality type (Virtuosos) love to explore with their hands and their eyes, touching and examining the world around them with an impressive diligence, a casual curiosity, and a healthy dose of skepticism. They are natural makers, moving from project to project, building the useful and the superfluous for the fun of it and learning from their environment as they go. They find no greater joy than in getting their hands dirty pulling things apart and putting them back together, leaving them just a little bit better than they were before.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/independent.png" alt="Icon">
+                            </div>
+                            <p>Independent</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/grounded.png" alt="Icon">
+                            </div>
+                            <p>Grounded</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/handy.png" alt="Icon">
+                            </div>
+                            <p>Handy and Resourceful</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/bored.png" alt="Icon">
+                            </div>
+                            <p>Easily Bored</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/independent.png" alt="Icon">
+                            </div>
+                            <p>Too Independent</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/unapologetic.png" alt="Icon">
+                            </div>
+                            <p>Unapologetic</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="isfp" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ISFP.svg" alt="ISFP Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="yellow">ISFP</h1>
+
+                            <div class="abbreviation" id="explorers-abbr">
+                              <h3>Introverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Feeling</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Adventurer</h2>
+                          </div>
+
+                          <p>ISFPs—Adventurers—see life as a canvas for self-expression. Whether through style, hobbies, or quiet moments of creativity, they reflect their individuality in everything they do. Their open-mindedness and playful sense of wonder make them effortlessly captivating and full of surprises.
+
+                            Kind-hearted and quietly inspiring, ISFPs encourage others to follow their passions simply by following their own. They may not seek the spotlight, but their authenticity and joy often leave a lasting impression.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/charming.png" alt="Icon">
+                            </div>
+                            <p>Charming</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/imaginative.png" alt="Icon">
+                            </div>
+                            <p>Imaginative</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/charming.png" alt="Icon">
+                            </div>
+                            <p>Kind and Encouraging</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/unpredictable.png" alt="Icon">
+                            </div>
+                            <p>Unpredictable</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/stressed.png" alt="Icon">
+                            </div>
+                            <p>Easily Stressed</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/self-esteem.png" alt="Icon">
+                            </div>
+                            <p>Fluctuating Self-Esteem</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="estp" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ESTP.svg" alt="ESTP Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="yellow">ESTP</h1>
+
+                            <div class="abbreviation" id="explorers-abbr">
+                              <h3>Extroverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Thinking</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Entrepreneur</h2>
+                          </div>
+
+                          <p>ESTPs—Entrepreneurs—are bold, dynamic individuals who thrive on action and spontaneity. Competitive and confident, they focus on the here and now, tackling life with energy and a can-do attitude. For them, success is about seizing opportunities—not sitting still or overthinking.
+
+                            They prefer hands-on experience over abstract theory and love conversations that are fast-paced, fun, and rooted in reality. ESTPs are natural risk-takers, learning through doing and adapting as they go—always ready to leap into the next adventure.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/confident.png" alt="Icon">
+                            </div>
+                            <p>Bold</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/talking.png" alt="Icon">
+                            </div>
+                            <p>Sociable</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/rational-yellow.png" alt="Icon">
+                            </div>
+                            <p>Rational and Practical</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/impatient-yellow.png" alt="Icon">
+                            </div>
+                            <p>Impatient</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/unpredictable.png" alt="Icon">
+                            </div>
+                            <p>Impulsive</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/defiance.png" alt="Icon">
+                            </div>
+                            <p>Defiant</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            
+                <section id="esfp" class="personality">
+                  <div class="personality-container">
+
+                    <div class="personality-image">
+                      <!-- You can insert an SVG or icon here -->
+                      <img src="IMAGES/ESFP.svg" alt="ESTP Icon">
+                    </div>
+
+                    <div class="personality-info">
+                        <div class="personality-title">
+                            <h1 class="yellow">ESFP</h1>
+
+                            <div class="abbreviation" id="explorers-abbr">
+                              <h3>Extroverted</h3>
+                              <h3>Observant</h3>
+                              <h3>Feeling</h3>
+                              <h3>Prospecting</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                          <div class="description-title">
+                            <h2>The Entertainer</h2>
+                          </div>
+
+                          <p>If anyone is to be found spontaneously breaking into song and dance, it is people with the ESFP personality type (Entertainers). They get caught up in the excitement of the moment and want everyone else to feel that way too. No other type is as generous with their time and energy when it comes to encouraging others, and no other type does it with such irresistible style.</p>
+                        </div>
+                        
+                  
+                        <!-- Strengths Section -->
+                        <div class="strengths">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/talking.png" alt="Icon">
+                            </div>
+                            <p>Excellent People Skills</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/observant.png" alt="Icon">
+                            </div>
+                            <p>Hands-on and Observant</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/confident.png" alt="Icon">
+                            </div>
+                            <p>Bold</p>
+                          </div>
+                        </div>
+
+                        <!-- Weakness Section -->
+                        <div class="weakness">
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/long-term.png" alt="Icon">
+                            </div>
+                            <p>Poor Long-Term Planners</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/hypersensitive.png" alt="Icon">
+                            </div>
+                            <p>Sensitive</p>
+                          </div>
+                          <div class="item">
+                            <div class="icon-container-explorers">
+                              <img src="IMAGES/bored.png" alt="Icon">
+                            </div>
+                            <p>Easily Bored</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section> 
+        </main>
+    </div>
+
+
+
+</body>
+</html>

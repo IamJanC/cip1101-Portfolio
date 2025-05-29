@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+body {
+    height: 100%;
+    margin: 0;
+    background-image: url(https://images.unsplash.com/photo-1579109568888-2e0a1f033455?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Divs */
+#panel-image-content {
+    width: 90%; 
+    height: 100%; 
+    background-color: rgba(43, 41, 41, 0.9);
+    margin: auto; 
+    padding: 20px;
+    border-radius: 25px; 
+}
+
+
+#panel-image-content {
+    display: flex; 
+    gap: 20px; 
+}
+
+#images {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+#images img {
+    width: 500px; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+#information {
+    flex: 1; 
+}
+
+
+/* Tables */
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    background-color: rgba(56, 55, 55, 0.9);
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", serif;
+    font-weight: 300;
+}
+
+/* Fonts */
+
+h1, h2{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(219, 211, 211);
+}
+
+h3{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(219, 211, 211);
+}
+
+p{
+    font-family: "Zain", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 23px;
+    color: rgb(219, 211, 211);
+}

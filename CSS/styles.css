@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #141819;
+    min-width: 500px; 
+}
+
+
+
+/* === NAVBAR ===  */
+.navbar {
+    background-color: #121515;
+    color: rgb(202, 202, 202);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h1{
+    font-family: "Zain", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 22px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+    font-family: "Zain", serif;
+    color: rgb(202, 202, 202);
+    text-decoration: none;
+    font-weight: 300;
+    font-style: normal;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(243, 94, 68);
+}
+
+.nav-links a.active {
+    color: rgb(243, 94, 68); /* Highlight color */
+}
+
+
+#current{
+    color: rgb(179, 86, 70);
+}
+
+/* Hamburger icon */
+.nav-toggle {
+  font-size: 24px;
+  color: rgb(202, 202, 202);
+  cursor: pointer;
+  display: none;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+
+/* === Sub Navbar === */
+#subNavbar {
+  position: fixed;
+  top: 75px; /* You can increase this until it looks right */
+  left: 0;
+  width: 100%;
+  background-color: #121515ee;
+  color: rgb(202, 202, 202);
+  padding: 10px 20px;
+  font-family: "Zain", serif;
+  font-weight: 300;
+  font-style: normal;
+  display: none; /* hidden by default */
+  z-index: 999; /* make sure it's above everything */
+
+ 
+}
+
+#subNavbar.show {
+  display: block;
+}
+
+.sub-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 40px;
+}
+
+.sub-links li {
+  margin: 5px 0;
+}
+
+.sub-links a {
+  color: rgb(202, 202, 202);
+  text-decoration: none;
+}
+
+.sub-links a:hover {
+  color: rgb(243, 94, 68);
+}
+
+
+
+/* === Sidebar === */
+/* === Mobile Sidebar === */
+.mobile-hamburger {
+  display: none;
+  font-size: 26px;
+  color: rgb(202, 202, 202);
+  cursor: pointer;
+  padding: 10px 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px; /* Ensure the sidebar is fully off-screen */
+  width: 280px;
+  height: 100%;
+  background-color: #121515;
+  color: rgb(202, 202, 202);
+  overflow-y: auto;
+  transition: left 0.5s ease;
+  z-index: 1090;
+  padding: 20px;
+}
+
+
+.mobile-sidebar.show {
+  left: 0;
+}
+
+.sidebar-close {
+  font-size: 24px;
+  color: rgb(202, 202, 202);
+  text-align: right;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  font-family: "Zain", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.sidebar-links li {
+  margin: 10px 0;
+}
+
+.sidebar-links a {
+  color: rgb(202, 202, 202);
+  text-decoration: none;
+}
+
+.sidebar-links a:hover {
+  color: rgb(243, 94, 68);
+}
+
+.sidebarLink-section{
+    margin-top: 50px;
+}
+
+.sidebar-section {
+    font-family: "Zain", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(163, 163, 163);
+}
+
+/* === Responsive Toggle === */
+@media (max-width: 920px) {
+  .navbar,
+  #subNavbar {
+    display: none; /* Hide desktop nav & subnav */
+  }
+
+  .mobile-hamburger {
+    display: block;
+  }
+}
+
+/* To hide the scrollbar when the sidebar is closed */
+.mobile-sidebar:not(.show) {
+    overflow: hidden;
+}
+
+/* The 'show' class will be added to make the sidebar slide in */
+.mobile-sidebar.show {
+    left: 0; /* Move the sidebar in from the left */
+}
+
+/* Optional: Styling the close button */
+.sidebar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(202, 202, 202);
+}
+
+/* Custom Scrollbar */
+.mobile-sidebar::-webkit-scrollbar {
+    width: 10px;  /* Width of the scrollbar */
+}
+
+.mobile-sidebar::-webkit-scrollbar-thumb {
+    background-color: #6e6d6d;  /* Thumb color */
+    border-radius: 10px;  /* Rounded edges */
+    border: 3px solid transparent;
+    background-clip: content-box;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #4b4b4b;  /* Darker shade on hover */
+}
+
+.mobile-sidebar::-webkit-scrollbar-track {
+    background-color: #222;  /* Track color */
+}
+
+
+
+
+
+/* === Banner ===  */
+#Banner {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#Banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 100%; 
+    background-image: url("/Images/Homepage/Banner\ Photo.avif");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    transform: scale(1.1); 
+    z-index: -1;
+}
+
+
+#Greetings img {
+    width: 150px; 
+    border-radius: 50%;
+}
+
+#Greetings {
+    padding-top: 50px;
+}
+
+#Greetings h2{
+    font-family: "Zain", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(163, 163, 163);
+}
+
+#Greetings h1{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(202, 202, 202);
+}
+
+
+
+#InfoContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; 
+}
+
+#Contact_Info {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 400px; 
+    margin-left: 20px;
+}
+
+.contact-item {
+    text-align: left;
+    padding-left: 12px;
+
+    font-family: "Zain", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: rgb(163, 163, 163);
+}
+
+.contact-item h4 {
+    margin-bottom: 4px; /* Adjust as needed */
+}
+
+.contact-item p {
+    margin-top: 0;
+}
+
+
+#Socials {
+    text-align: right;
+    align-self: flex-end;
+    padding-bottom: 10px;
+}
+
+#Socials img {
+    margin: 0 20px 10px 10px; /* Adds spacing on both left and right */
+}
+
+#WhoAmIContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
+}
+
+
+#WhoAmI {
+    display: flex;
+    justify-content: space-between; 
+    gap: 50px;
+    width: 90%; 
+    max-width: none; 
+    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
+}
+
+
+#AboutMeInformation {
+    flex: 1;
+    max-width: none; 
+    text-align: left;
+}
+
+#AboutMeInformation h3{
+    font-family: "Zain", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    color: rgb(163, 163, 163);
+    margin-top: 9px;
+}
+
+#AboutMeInformation  h1{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(202, 202, 202);
+}
+
+#AboutMeInformation p, li{
+    font-family: "Zain", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 22px;
+    color: rgb(163, 163, 163);
+}
+
+#AboutMeInformation p {
+    text-align: justify;
+}
+
+
+#About_Me{
+    background-color: #121515;
+}
+
+
+
+#WhoAmI img {
+    width: 450px; 
+    height: 470px; 
+    object-fit: cover; 
+    object-position: center; 
+    padding-top: 120px;
+}
+
+
+@media screen and (max-width: 1080px) {
+    #WhoAmI {
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    #WhoAmI img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        
+    }
+
+    #AboutMeInformation {
+        text-align: center; /* Center the text on smaller screens */
+    }
+}
+
+#SkillsHobbiesContainer {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #141819;
+}
+
+#SkillsHobbiesContainer h1{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(202, 202, 202);
+}
+
+
+#SkillsGrid, #HobbiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+
+.card {
+    background: #171b1f;
+    padding: 20px;
+    border-radius: 0px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+
+}
+
+/* Temp */
+
+.music-player, .video-player{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.music-player h1, .video-player h1{
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(202, 202, 202);
+}
+
+
+
+
+/* === RESPONSIVENESS === */
+
+@media (max-width: 1300px) {
+    #Banner::before {
+        transform: scale(1.3); /* zooms in more */
+        background-position: left; /* keeps it centered */
+    }
+}
+
+@media (max-width: 1100px) {
+    #Banner::before {
+        transform: scale(1.6); /* zooms in more */
+        background-position: left; /* keeps it centered */
+    }
+}
+
+@media (max-width: 800px) {
+    #Banner::before {
+        transform: scale(1.3); /* zooms in more */
+        background-position: left; /* keeps it centered */
+    }
+}
+
+/* Responsive Styles 
+@media (max-width: 849px) {
+  .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Sidebar specific styling 
+    .sidebar {
+        display: block;
+    }
+}
+*/
+
+@media (max-width: 720px) {
+   #InfoContainer {
+        display: block;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px; 
+    }   
+
+
+    #Socials {
+        display: flex;
+        align-items: flex-start; 
+        margin-left: 25px;
+    }
+
+    #Socials a {
+        margin-top: 20px; 
+    }
+
+    #Socials img {
+        margin: 0 20px 5px 5px; 
+        height: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #Contact_Info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,128 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Lexend+Tera:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+body{
+
+    background-color: #080808;
+    margin-left: 50px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px 10px 25px; /* Adjust padding as needed */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px; /* Adjust spacing between links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+nav #current{
+    color: rgb(206, 62, 62);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ddd5d5;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(202, 127, 127);
+}
+
+nav h1{
+    font-family: "Gaegu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ddd5d5;
+}
+
+nav span{
+    color: rgb(206, 62, 62);
+    padding: 0;
+    margin: 0;
+}
+
+#Banner {
+    color: #ddd5d5;
+    display: flex;
+    align-items: center;
+    gap: 350px; 
+    justify-content: flex-start; 
+}
+
+#Banner h1 {
+    font-family: "Lexend Tera", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 150px;
+    color: #ddd5d5;
+    white-space: nowrap; 
+}
+
+#Banner Span {
+    color: rgb(206, 62, 62);
+}
+
+
+.banner-content { 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    max-width: auto; 
+}
+
+#Banner #Discount {
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#Banner #Secondary {
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 0;
+}
+
+
+.cta-button {
+    display: inline-block;
+    width: 200px;  
+    height: 60px;
+    line-height: 60px; 
+    text-align: center; 
+    background-color: #363636;
+    color: #ddd5d5;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 18px; 
+    font-family: "Lexend Tera", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+}
+
+.cta-button:hover {
+    background-color: rgb(206, 62, 62);
+}
+
+

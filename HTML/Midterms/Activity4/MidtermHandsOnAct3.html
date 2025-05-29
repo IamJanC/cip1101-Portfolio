@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Activity</title>
+</head>
+
+<!--CSS HERE-->
+
+<style>
+    
+.paper{
+  background-color: rgb(255, 255, 255);
+  width: 85%;
+  height: 100%;
+  padding: 25px;
+  margin: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap; 
+}
+
+/* Style all form input */
+.form-group {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: baseline; 
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  label {
+  flex-shrink: 0; 
+  font-weight: bold;
+  margin-bottom: 0; 
+  white-space: nowrap; 
+  max-width: 200px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  }
+  
+  .line-input {
+  flex-grow: 1; 
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background-color: transparent;
+  padding: 5px 0;
+  margin-bottom: 0; 
+  width: 100%; 
+  }
+
+  .form-group label {
+    word-wrap: break-word; 
+    max-width: 70%; 
+  }
+  
+  
+  /* ONE NAME */
+  
+  .name{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .name-oneline {
+    width: 700px;
+  }
+  
+  .name-line {
+    display: flex;
+    border-bottom: 1px solid black; 
+    gap: 10px;
+    padding: 5px 0;
+  }
+  
+  .name-input {
+    flex: 1; 
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px 0;
+  }
+  
+  .name-note-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 3px;
+  }
+  
+  .name-note {
+    flex: 1; 
+    font-size: 16px;
+    text-align: center; 
+  }
+  
+  /* AUXILIARY NAME */
+  .name-auxiliary{
+    padding: 10px 0;
+  }
+  
+  .name-note-row-auxiliary {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .form-full-width {
+    display: flex;
+    align-items: center; 
+    width: 100%; 
+    gap: 10px;
+}
+
+.form-full-width label {
+  width: 120px;  /* Fixed width for the label */
+  font-weight: bold;
+}
+  
+  
+  /* Input stretches to fill remaining space */
+.line-input-full {
+  flex-grow: 1; /* Makes the input take up the remaining space */
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background-color: transparent;
+  padding: 5px 0;
+}
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline; 
+    width: 100%; 
+     flex-wrap: wrap; 
+  }
+  
+  .form-group-side-by-side{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-group{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  /* Birthday */
+  .form-group-birthday {
+    display: flex;
+  
+    margin-bottom: 16px;
+  }
+  
+  
+  .birthday-selects {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .line-select {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background-color: transparent;
+    padding: 5px 0;
+    font-size: 16px;
+    width: 100px;
+    appearance: none; 
+    text-align: center;
+  }
+  
+  
+  .left-group-father form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-group-guardian{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 15px;
+  }
+  
+  
+  
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header img {
+  max-width: 200px; 
+  height: auto;
+}
+
+/* Title area: Center the content */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 2; 
+}
+
+
+
+.header-form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+</style>
+<body>
+    <div class="paper">
+        <div class="header">
+            <img src="https://marketplace.canva.com/EAF3KvAAhL0/2/0/1600w/canva-blue-modern-initials-letter-a-university-logo-y8qxwQzSkXs.jpg" alt="University Logo">
+
+            <div class="title">
+
+                <div class="university-title">
+                    <h1>Adeline University</h1>
+                    <h3>ENROLLMENT SYSTEM</h3>
+                </div>
+
+                <div class="form-title">
+                    <h1>PERSONAL DATA SHEET</h1>
+                    <h3>Law Graduate School</h3>
+                </div>
+            </div>
+
+            <div class="header-form">
+                <form>
+                    <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="line-input">
+                    </div>
+                
+                    <div class="form-group">
+                    <label for="student-number">Student #:</label>
+                    <input type="text" id="student-number" class="line-input">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="name">
+            <div class="name-oneline">
+                <div class="name-line">
+                    <input type="text" name="lastName" class="name-input" placeholder=" ">
+                    <input type="text" name="givenName" class="name-input" placeholder=" ">
+                    <input type="text" name="middleName" class="name-input" placeholder=" ">
+                </div>
+                
+                <!-- Aligned labels underneath -->
+                <div class="name-note-row">
+                    <span class="name-note">Last name</span>
+                    <span class="name-note">Given name</span>
+                    <span class="name-note">Middle name</span>
+                </div>
+            </div>
+
+            <div class="name-auxiliary">
+                <div class="form-auxiliary">
+                    <form>
+                        <input type="text" id="name-auxiliary" name="name-auxiliary" class="line-input">
+                    </form>
+                </div>
+                <div class="name-note-row-auxiliary">
+                    <span class="name-auxiliary-label">Auxiliary Name</span>
+                    <span class="name-auxiliary-label">(Sir, Jr., I, II, III)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="Student-Details">
+            <h1>Student Details: </h1>
+
+            <div class="form-full-width">
+                <label for="city-address">City Address: </label>
+                <input type="text" id="city-address" class="line-input-full">
+            </div>
+
+            <div class="form-row">
+                <label for="zip-code">Zip Code :</label>
+                <input type="text" id="zip-code" class="line-input">
+            
+                <label for="tel-no">Tel No. :</label>
+                <input type="text" id="tel-no" class="line-input">
+            
+                <label for="e-mail">E-mail Address :</label>
+                <input type="text" id="e-mail" class="line-input">
+            </div>
+            
+            <div class="form-full-width">
+                <label for="home-address">Home Address: </label>
+                <input type="text" id="home-address" class="line-input-full">
+            </div>
+
+            <div class="form-group-side-by-side">
+                <div class="left-group">
+                    <form>
+                        <label for="zip-code">Zip Code : </label>
+                        <input type="text" name="zip-code" class="line-input" placeholder=" ">
+                    </form>
+
+                    <div class="form-group-birthday">
+                        <label for="birthday">Birthday:</label>
+                        <div class="birthday-selects">
+                        <select class="line-select" name="birth-month" aria-label="Month">
+                            <option value="" disabled selected>Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                            <!-- Add remaining months... -->
+                        </select>
+                    
+                        <select class="line-select" name="birth-day" aria-label="Day">
+                            <option value="" disabled selected>Day</option>
+                            <!-- 1 to 31 -->
+                            <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                            </script>
+                        </select>
+                    
+                        <select class="line-select" name="birth-year" aria-label="Year">
+                            <option value="" disabled selected>Year</option>
+                            <!-- 1900 to current year -->
+                            <script>
+                            const currentYear = new Date().getFullYear();
+                            for (let y = currentYear; y >= 1900; y--) {
+                                document.write(`<option value="${y}">${y}</option>`);
+                            }
+                            </script>
+                        </select>
+                        </div>
+                    </div>
+
+                    <form>
+                        <label for="birthplace">Birthplace: </label>
+                        <input type="text" name="birthplace" class="line-input" placeholder=" ">
+                    </form>
+
+                    <form>
+                        <label for="citizenship">Citizenship: </label>
+                        <input type="text" name="citizenship" class="line-input" placeholder=" ">
+                    </form>
+
+                    <form>
+                        <label for="ACR">If Alien, ACR # (see Registrar): </label>
+                        <input type="text" name="ACR" class="line-input" placeholder=" ">
+                    </form>
+                </div>
+
+                <div class="right-group">
+                    <form>
+                        <label for="region">Region: </label>
+                        <input type="text" name="region" class="line-input" placeholder=" ">
+                    </form>
+
+                    <form>
+                        <label for="age">Age: </label>
+                        <input type="text" name="age" class="line-input" placeholder=" ">
+                    </form>
+
+                    <form>
+                        <label for="religion">Religion: </label>
+                        <input type="text" name="religion" class="line-input" placeholder=" ">
+                    </form>
+
+                    <form>
+                        <label for="sex">Sex: </label>
+                        <input type="text" name="sex" class="line-input" placeholder=" ">
+                    </form>
+                </div>
+            </div>
+
+            <div class="form-group-side-by-side">
+                <div class="left-legal-status">
+                    <h1>Legal Status</h1>
+                    <label>
+                        <input type="checkbox" name="legal-status" value="drawing"> Citizen of RP
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="legal-status" value="writing"> Permanent Resident
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="legal-status" value="painting"> Person granted permission to enter and remain as a student in RP on a visa for a defined period of time
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="legal-status" value="drawing"> Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="legal-status" value="writing"> Other visa
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="legal-status" value="painting"> Legal status not known
+                    </label>
+                </div>
+                <div class="right-civil-status">
+                    <h1>Civil Status</h1>
+                    <form>
+                        <label>
+                        <input type="checkbox" name="hobby" value="drawing"> Single
+                        </label><br>
+                        <label>
+                        <input type="checkbox" name="hobby" value="writing"> Married
+                        </label><br>
+                        <label>
+                        <input type="checkbox" name="hobby" value="painting"> Divorce
+                        </label>
+                        <label><br>
+                        <input type="checkbox" name="hobby" value="drawing"> Widowed 
+                        </label><br>
+                        <label>
+                        <input type="checkbox" name="hobby" value="writing"> Separated
+                        </label><br>
+                        
+
+                        <div class="split-checkbox">
+                            <label>
+                                <input type="checkbox" name="hobby" value="drawing"> Working
+                            </label>
+                            <label>
+                                <input type="checkbox" name="hobby" value="writing"> Not Working
+                            </label><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="form-group-side-by-side">
+                <div class="left-group-father">
+                    <h1>Father's Information</h1>
+                    <form>
+                        <div class="form-group">
+                        <label for="surname">Surname:</label>
+                        <input type="text" name="surname" id="father-surname" class="line-input" placeholder=" ">
+                        </div>
+                    
+                        <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" name="first-name" id="first-name" class="line-input" placeholder=" ">
+                        </div>
+                    
+                        <div class="form-group">
+                        <label for="middle-name">Middle Name:</label>
+                        <input type="text" name="middle-name" id="middle-name" class="line-input" placeholder=" ">
+                        </div>
+                    
+                        <div class="form-group">
+                        <label for="auxiliary-name">Auxiliary Name:</label>
+                        <input type="text" name="auxiliary-name" id="auxiliary-name" class="line-input" placeholder=" ">
+                        </div>
+                    
+                        <div class="form-group">
+                        <label for="occupation">Occupation/Employment:</label>
+                        <input type="text" name="occupation" id="occupation" class="line-input" placeholder=" ">
+                        </div>
+                    
+                        <div class="form-group">
+                        <label for="educational">Educational Attainment:</label>
+                        <input type="text" name="educational" id="educational" class="line-input" placeholder=" ">
+                        </div>
+                    
+                        <div class="form-group">
+                        <label for="address">Parent's Address:</label>
+                        <input type="text" name="father-address" id="father-address" class="line-input" placeholder=" ">
+                        </div>
+                    
+                        <div class="form-group">
+                        <label for="zip-code">Zip Code:</label>
+                        <input type="text" name="zip-code" id="zip-code" class="line-input" placeholder=" ">
+                        </div>
+                    </form>
+                </div>
+                <div class="right-group-mother">
+                    <h1>Mother's Information</h1>
+                    <form>
+                            <div class="form-group">
+                            <label for="surname">Surname:</label>
+                            <input type="text" name="surname" id="father-surname" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" name="first-name" id="first-name" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="middle-name">Middle Name:</label>
+                            <input type="text" name="middle-name" id="middle-name" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="auxiliary-name">Auxiliary Name:</label>
+                            <input type="text" name="auxiliary-name" id="auxiliary-name" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="occupation">Occupation/Employment:</label>
+                            <input type="text" name="occupation" id="occupation" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="educational">Educational Attainment:</label>
+                            <input type="text" name="educational" id="educational" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="address">Parent's Address:</label>
+                            <input type="text" name="father-address" id="father-address" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="zip-code">Parent's Tel #:</label>
+                            <input type="text" name="zip-code" id="zip-code" class="line-input" placeholder=" ">
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="guardian-information">
+                <h1>Guardian's Information</h1>
+                <div class="main-container">
+                    <div class="left-group-guardian">
+                        <div class="form-group">
+                            <label for="surname">Surname:</label>
+                            <input type="text" name="surname" id="father-surname" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" name="first-name" id="first-name" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="middle-name">Middle Name:</label>
+                            <input type="text" name="middle-name" id="middle-name" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="auxiliary-name">Auxiliary Name:</label>
+                            <input type="text" name="auxiliary-name" id="auxiliary-name" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="occupation">Occupation/Employment:</label>
+                            <input type="text" name="occupation" id="occupation" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="educational">Off./Bus. Tel. #:</label>
+                            <input type="text" name="educational" id="educational" class="line-input" placeholder=" ">
+                            </div>
+                    </div>
+                    <div class="right-group-guardian">
+                            <div class="form-group">
+                            <label for="auxiliary-name">Guardian's Address</label>
+                            <input type="text" name="auxiliary-name" id="auxiliary-name" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="occupation">Zip Code: </label>
+                            <input type="text" name="occupation" id="occupation" class="line-input" placeholder=" ">
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="educational">Tel. #:</label>
+                            <input type="text" name="educational" id="educational" class="line-input" placeholder=" ">
+                            </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

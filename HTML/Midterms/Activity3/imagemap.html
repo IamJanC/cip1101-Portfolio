@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 6 Image Map</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+        h1{
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+
+        p, a {
+            font-family: "Zain", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="MidLect6.html">Back to Home (MidLect6.html)</a>
+    <div>
+        <h1>12-13. Create your image map with 2 links inside. (15pts) You may use an online image map generator if you want detailed coordinates. (15pts)</h1>
+        <img src="Image Map.png" id="No12-13-Image-Map" alt="My Own Image Map (Raw)" usemap="#image-map" width="1000px" height="auto">
+        <map name="image-map">
+            <area alt="Picture of Myself" title="Go to Jan.html" href="Jan.html" coords="338,643,291" shape="circle" data-coords="338,643,291">
+            <area alt="Picture of My Favourite Song" title="Go to IsaLang.html" href="IsaLang.html" coords="679,933,1264,354" shape="rect" data-coords="679,933,1264,354">
+            <area alt="Picture of My Favourite Flower" title="Go to LilyoftheValley.html" href="LilyoftheValley.html" coords="1651,354,1985,937,1315,931" shape="poly" data-coords="1651,354,1985,937,1315,931">
+        </map>
+    </div>
+
+    <script>
+        function resizeMap() {
+            let img = document.getElementById("No12-13-Image-Map");
+            let originalWidth = 2000; // Set this to your image's original width
+            let originalHeight = 1414; // Set this to your image's original height
+            let currentWidth = img.clientWidth;
+            let currentHeight = img.clientHeight;
+            
+            let scaleX = currentWidth / originalWidth;
+            let scaleY = currentHeight / originalHeight;
+    
+            document.querySelectorAll("map area").forEach(area => {
+                let coords = area.dataset.coords.split(',').map(Number);
+                for (let i = 0; i < coords.length; i += 2) {
+                    coords[i] = Math.round(coords[i] * scaleX);
+                    coords[i + 1] = Math.round(coords[i + 1] * scaleY);
+                }
+                area.coords = coords.join(',');
+            });
+        }
+    
+        window.addEventListener("load", resizeMap);
+        window.addEventListener("resize", resizeMap);
+    </script>
+    
+</body>
+</html>

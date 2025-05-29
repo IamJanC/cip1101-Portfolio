@@ -1,0 +1,166 @@
+/* == Fonts == */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Outfit */
+
+/*
+.outfit-<uniquifier> {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>; 100 - 900
+  font-style: normal;
+}
+
+*/
+
+
+/* == Global Stuff == */
+* 
+{
+    box-sizing: border-box;
+}
+
+html, body 
+{
+    height: 100%;
+    margin: 0;
+}
+
+header h1{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+#sub-details h3{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: large;
+
+    margin: 0;
+    padding: 0;
+}
+
+main h2, h4{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 20px;
+}
+
+main li, p{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: large;
+    
+    margin-bottom: 0.5rem;
+}
+
+.center-caption figcaption{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+
+    margin-top: 10px;
+}
+
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+
+
+/* == Primary Container == */
+#primary-container 
+{
+    min-height: 100vh; 
+}
+
+article 
+{
+    min-height: 100vh; 
+    width: 100%;
+    max-width: 680px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+header{
+    margin-bottom: 20px;
+}
+
+#sub-details{
+    border-top: 1px solid #6b6b6b;
+    border-bottom: 1px solid #6b6b6b;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-bottom: 20px;
+
+    color: #6b6b6b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* optional spacing */
+}
+
+.dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 1.5rem; /* tweak to match your <h3> size */
+  transform: translateY(-2px); /* adjust slightly if still misaligned */
+}
+
+.content{
+    margin-bottom: 50px;
+}
+
+.center-caption {
+  text-align: center;
+}
+
+
+/* == SPECIFIC FOR PAGES STUFF == */
+
+
+/* FOR VISUALIZATION PURPOSES 
+
+article {
+    background-color: beige;
+}
+
+#primary-container {
+    background-color: red;
+}
+
+.container{
+    background-color: gray;
+}
+
+header, section, main{
+    background-color: gray;
+}
+    */

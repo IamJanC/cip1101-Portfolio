@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Admin Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      background-color: #ffffff;
+      color: #3b3f5c;
+      width: 250px;
+      transition: transform 0.3s ease;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      background-color: #ffffff;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px 20px;
+    }
+
+    .sidebar ul li a {
+      color: #3b3f5c;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar ul li span {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .hover-highlight:hover {
+      background-color: #f1f3f9;
+      border-left: 4px solid #6366f1;
+      cursor: pointer;
+    }
+
+    /* Hamburger styles - only on mobile */
+    .hamburger {
+      background: none;
+      border: none;
+      color: #3b3f5c;
+      font-size: 24px;
+      display: none;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
+    }
+
+    /* Main content */
+    .main {
+      flex-grow: 1;
+      padding: 20px;
+      width: 100%;
+    }
+
+    /* Section control */
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    /* Hover effect for tables */
+    table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: fixed;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: 999;
+      }
+
+      .sidebar.show {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hamburger (only on mobile) -->
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <!-- Sidebar -->
+  <nav class="sidebar bg-white shadow-sm" id="sidebar">
+    <div class="sidebar-header">
+      <h5 class="mb-0">🏨 Hotel Admin</h5>
+    </div>
+    <ul class="list-unstyled mt-3">
+      <li class="px-4 py-3 hover-highlight" onclick="showSection('room-module')">
+        <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+          <span>🛏️</span> Room Module
+        </a>
+      </li>
+      <li class="px-4 py-3 hover-highlight" onclick="showSection('transaction-module')">
+        <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+          <span>💳</span> Transaction Module
+        </a>
+      </li>
+      <li class="px-4 py-3 hover-highlight" onclick="showSection('user-module')">
+        <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+          <span>👤</span> User/Guest Module
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Room Module -->
+    <section id="room-module" class="active">
+      <h2>Room Module</h2>
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Room #</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>Deluxe</td>
+            <td>Available</td>
+            <td>$120</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Standard</td>
+            <td>Occupied</td>
+            <td>$90</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Transaction Module -->
+    <section id="transaction-module">
+      <h2>Transaction Module</h2>
+      <div class="card p-3 mb-3">
+        <label for="booking-date" class="form-label">Select Date:</label>
+        <input type="date" id="booking-date" class="form-control" />
+      </div>
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Transaction ID</th>
+            <th>Guest</th>
+            <th>Room</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TX001</td>
+            <td>John Doe</td>
+            <td>101</td>
+            <td>2025-05-20</td>
+            <td>Checked In</td>
+          </tr>
+          <tr>
+            <td>TX002</td>
+            <td>Jane Smith</td>
+            <td>202</td>
+            <td>2025-05-21</td>
+            <td>Reserved</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- User Module -->
+    <section id="user-module">
+      <h2>User/Guest Module</h2>
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>U001</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>Guest</td>
+          </tr>
+          <tr>
+            <td>U002</td>
+            <td>Admin User</td>
+            <td>admin@hotel.com</td>
+            <td>Admin</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("show");
+    }
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+
+      // Close sidebar if on mobile
+      if (window.innerWidth <= 768) {
+        document.getElementById("sidebar").classList.remove("show");
+      }
+    }
+  </script>
+</body>
+</html>

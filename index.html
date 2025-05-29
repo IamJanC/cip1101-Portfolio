@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <title>Portfolio Landing Page</title>
+</head>
+<body>
+
+    <!-- === NAVIGATION BAR === -->
+    <nav class="navbar">
+    <div class="nav-container">
+        
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" id="current">Home</a></li>
+            <li><a href="#">Lectures</a></li>
+            <li><a href="#">Prelims</a></li>
+            <li><a href="#">Midterms</a></li>
+            <li><a href="#">Finals</a></li>
+        </ul>
+
+        <div class="nav-logo"><h1>CIP 1101 Integrative Programming and Technologies 1</h1></div>
+    </div>
+    </nav>
+
+    <!-- === SUB NAVBAR === -->
+    <div id="subNavbar">
+     <!-- Lectures -->
+    <ul class="sub-links" id="lectureLinks">
+        <li>Lectures</li>
+        <li><a href="HTML/Lectures/Prelim_Activity1.pdf" target="_blank">Lecture 1 - Intro to Web Design and Component</a></li> <!--Might change Lect1-->
+        <li><a href="HTML/Lectures/Lecture2.html" target="_blank">Lecture 2 - HTML Structures</a></li>
+        <li><a href="HTML/Lectures/Lect3.html" target="_blank">Lecture 3 - Tables</a></li>
+        <li><a href="HTML/Lectures/Lect5.html" target="_blank">Lecture 4 - List, Links, and Images</a></li>
+        <li><a href="HTML/Lectures/Lecture4/Lecture4.html" target="_blank">Lecture 5 - CSS</a></li>
+        <li><a href="HTML/Lectures/Lect6.html" target="_blank">Lecture 6 - Forms</a></li>
+        <li><a href="HTML/Lectures/Cruzado_CIP 1101 FINALS ASSIGNMENT RESEARCH 1.pdf" target="_blank">Lecture 7 - Bootstrap</a></li><!--Might change Lect7-->
+        <li>...</li>
+    </ul>
+
+    <!-- Prelims -->
+    <ul class="sub-links" id="prelimsLinks">
+        <li>Activities for Prelims</li>
+        <li><a href="HTML/Prelims/Activity2/ImageGallery.html" target="_blank">Prelim Activity 2 - Table-Image Gallery</a></li>
+        <li><a href="#About_Me">Prelim Activity 3 - Tags - Web Developer's Page</a></li>
+        <li><a href="HTML/Prelims/Quiz1/PrelimHandsOnQuiz1.html" target="_blank">Prelim QUIZ 1 - Table with Images</a></li>
+        <li><a href="HTML/Prelims/Exam/index.html" target="_blank">Prelim EXAM - Furniture Sale</a></li>
+    </ul>
+
+    <!-- Midterms -->
+    <ul class="sub-links" id="midtermsLinks" style="display: none;">
+        <li>Activities for Midterms</li>
+        <li><a href="HTML/Midterms/Activity2/MidAct2LIST.html" target="_blank">Midterm Activity 2 - Lists-Table of Contents</a></li>
+        <li><a href="HTML/Midterms/Activity3/MidLect6.html" target="_blank">Midterm Activity 3 - Image and Image Mapping</a></li>
+        <li><a href="HTML/Midterms/Activity4/MidtermHandsOnAct3.html" target="_blank">Midterm Activity 4 - Admission Form</a></li>
+        <li><a href="HTML/Midterms/Exam/index.html" target="_blank">Midterm EXAM - Informative Page</a></li>
+    </ul>
+
+    <!-- Finals -->
+    <ul class="sub-links" id="finalsLinks" style="display: none;">
+        <li>Activities for Finals</li>
+        <li><a href="HTML/Finals/FinalAct/index.html" target="_blank">Final Activity - Admin Page</a></li>
+    </ul>
+    </div>
+
+    <!-- === MOBILE SIDEBAR NAVIGATION === -->
+    <div id="mobileSidebar" class="mobile-sidebar">
+    <!-- Close Button -->
+    <div class="sidebar-close" id="sidebarClose">&times;</div>
+
+    <!-- Sidebar Content -->
+    <ul class="sidebar-links">
+        <li><a href="#">Home</a></li>
+
+        <div class="sidebarLink-section">
+            <li class="sidebar-section">Lectures</li>
+            <li><a href="HTML/Lectures/Prelim_Activity1.pdf">Lecture 1 - Intro to Web Design and Component</a></li>
+            <li><a href="HTML/Lectures/Lecture2.html" target="_blank">Lecture 2 - HTML Structures</a></li>
+            <li><a href="HTML/Lectures/Lect3.html">Lecture 3 - Tables</a></li>
+            <li><a href="HTML/Lectures/Lect5.html" target="_blank">Lecture 4 - List, Links, and Images</a></li>
+            <li><a href="HTML/Lectures/Lecture4/Lecture4.html" target="_blank">Lecture 5 - CSS</a></li>
+            <li><a href="HTML/Lectures/Lect6.html" target="_blank">Lecture 6 - Forms</a></li>
+            <li><a href="HTML/Lectures/Cruzado_CIP 1101 FINALS ASSIGNMENT RESEARCH 1.pdf" target="_blank">Lecture 7 - Bootstrap</a></li>
+            <li>...</li>
+        </div>
+
+        <div class="sidebarLink-section">
+            <li class="sidebar-section">Prelims</li>
+            <li><a href="HTML/Prelims/Activity2/ImageGallery.html" target="_blank">Prelim Activity 2 - Table-Image Gallery</a></li>
+            <li><a href="#About_Me">Prelim Activity 3 - Tags - Web Developer's Page</a></li>
+            <li><a href="HTML/Prelims/Quiz1/PrelimHandsOnQuiz1.html" target="_blank">Prelim QUIZ 1 - Table with Images</a></li>
+            <li><a href="HTML/Prelims/Exam/index.html" target="_blank">Prelim EXAM - Furniture Sale</a></li>
+            <!-- ... -->
+        </div>
+
+        <div class="sidebarLink-section">
+            <li class="sidebar-section">Midterms</li>
+            <li>Activities for Midterms</li>
+            <li><a href="HTML/Midterms/Activity2/MidAct2LIST.html" target="_blank">Midterm Activity 2 - Lists-Table of Contents</a></li>
+            <li><a href="HTML/Midterms/Activity3/MidLect6.html" target="_blank">Midterm Activity 3 - Image and Image Mapping</a></li>
+            <li><a href="HTML/Midterms/Activity4/MidtermHandsOnAct3.html" target="_blank">Midterm Activity 4 - Admission Form</a></li>
+            <li><a href="HTML/Midterms/Exam/index.html" target="_blank">Midterm EXAM - Informative Page</a></li>
+            <!-- ... -->
+        </div>
+
+        <div class="sidebarLink-section">
+            <li class="sidebar-section">Finals</li>
+            <li><a href="HTML/Finals/FinalAct/index.html" target="_blank">Final Activity - Admin Page</a></li>
+        </div>
+    </ul>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <div id="mobileHamburger" class="mobile-hamburger">&#9776;</div>
+
+
+    <!-- === Banner === -->
+    <div id="Banner">
+        
+        <div id="Greetings">
+            <img src="/Images/Homepage/Profile Picture.jpg" alt="Developer's Profile Picture">
+            <h2>Hi There!</h2>
+            <h1>I'm Jan Cruzado</h1>
+            <h1>A Computer Science Student</h1>
+            <h2>I aspire to make the world a better place.</h2>
+        </div>
+        
+        <div id="InfoContainer">
+            <div id="Contact_Info">
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <p>cruzado.janmarlain@gmail.com</p>
+                </div>
+        
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>Manila, Philippines</p>
+                </div>
+            </div>
+        
+    
+            <!--Social Media Links-->
+            <div id="Socials">
+
+                 <a href="https://www.facebook.com/Jan.Cruzado15" target="_blank"><img src="/Images/Homepage/Facebook.png" alt="Facebook Logo" height="30px"></a>
+                <a href="https://www.instagram.com/marlainnnn/" target="_blank"><img src="/Images/Homepage/Instagram.png" alt="Instagram Logo" height="30px"></a>
+                <a href="mailto:cruzado.janmarlain@gmail.com"><img src="/Images/Homepage/Gmail.png" alt="Email" height="30px"></a>
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="About_Me">
+        <br>
+        <div id="WhoAmIContainer">
+
+            <div id="WhoAmI">
+                <img src="/Images/Homepage/WhoAmI_Picture.jpg" alt="My Picture">
+
+                <div id="AboutMeInformation">
+
+                    <h3>Who am I?</h3>
+                    <h1>About Me</h1>
+                
+                    <p>
+                        My name is Jan Cruzado and from a young age, I was fascinated by technology. 
+                        I was born and raised in Metro Manila, Philippines, and when my parents bought me my first personal desktop, 
+                        it introduced me to the world of gaming and technology. That experience sparked my curiosity, and as I grew older, 
+                        my interest in technology deepened. Despite struggling with math, that weakness and my passion for problem-solving and innovation 
+                        led me to pursue a career in Computer Science. 
+                        Now, as a 2nd-year Computer Science student at the University of the East (Manila), 
+                        I am continuously working to expand my knowledge and refine my skills. 
+                        I am passionate about technology and excited about the endless possibilities it offers. 
+                        My goal is to become a skilled computer scientist—one who can innovate, push boundaries, and create meaningful experiences through technology.
+                    </p>
+
+                    <div id="Education">
+    
+                        <h1>Education</h1>
+                        <p>
+                            Currently a 2nd-year college student pursuing a Bachelor's Degree in Computer Science at the University of the East (Manila).<br>
+                        </p>
+                        
+                        <p><strong>Relevant Coursework:</strong></p>
+                        <ul>
+                            <li>Data Structures and Algorithms</li>
+                            <li>Software Engineering</li>
+                            <li>Calculus</li>
+                            <li>Discrete Math</li>
+                            <li>Statistics</li>
+                        </ul>
+                        
+                        <p><strong>Expected Graduation:</strong> 2027</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="SkillsHobbiesContainer">
+        <h1>Skills</h1>
+        <div id="SkillsGrid">
+            <div class="card">
+                <img src="/Images/Homepage/CSS.png" alt="Logo of HTML" height="90px">
+                <h1>HTML & CSS</h1>
+            </div>
+            <div class="card">
+                <img src="/Images/Homepage/Python.png" alt="Logo of Python" height="90px">
+                <h1>Python</h1>
+            </div>
+            <div class="card">
+                <img src="/Images/Homepage/CPlusPlus.png" alt="Logo of C++" height="90px">
+                <h1>C++</h1>
+            </div>
+            <div class="card">
+                <img src="/Images/Homepage/SQL.png" alt="Logo of SQL" height="90px">
+                <h1>SQL</h1>
+            </div>
+            <div class="card">
+                <img src="/Images/Homepage/Java.png" alt="Logo of Java" height="90px">
+                <h1>Java</h1>
+            </div>
+        </div>
+    
+        <h1>Hobbies & Interests</h1>
+        <div id="HobbiesGrid">
+            <div class="card">
+                <img src="/Images/Homepage/Gaming.png" alt="Gaming" height="90px">
+                <h1>Gaming</h1>
+            </div>
+            <div class="card">
+                <img src="/Images/Homepage/Study.png" alt="Studying" height="90px">
+                <h1>Studying</h1>
+            </div>
+            <div class="card">
+                <img src="/Images/Homepage/Watch.png" alt="Watching Educational Videos" height="90px">
+                <h1>Watching Educational Videos</h1>
+            </div>
+            <div class="card">
+                <img src="/Images/Homepage/Chess.png" alt="Playing Chess" height="90px">
+                <h1>Playing Chess</h1>
+            </div>
+        </div>
+
+
+        <!-- === Might Change === -->
+        <h1>Favourite Songs</h1>
+        <div class="music-player">
+            <!--Isa Lang-->
+            <div class="card-song">
+                <img src="Images/Resources/Isa Lang.jpg" alt="Watching Educational Videos" height="90px">
+                <h1>Isa Lang</h1>
+
+                <audio controls>
+                    <source src="Images/Resources/Isa lang - Arthur Nery (Official Lyric Video).mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+           </div>
+
+           <!--Multo-->
+           <div class="card-song">
+                <img src="Images/Resources/Multo.jpg" alt="Watching Educational Videos" height="90px">
+                <h1>Multo</h1>
+
+                <audio controls>
+                    <source src="Images/Resources/Multo (Live at The Cozy Cove) - Cup of Joe.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+
+            <!--SOS-->
+            <div class="card-song">
+                <img src="Images/Resources/SOS.jpg" alt="Watching Educational Videos" height="90px">
+                <h1>SOS by Zik</h1>
+
+                <audio controls>
+                    <source src="Images/Resources/SOS  ZIK鄒沛沛.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+
+            <!--Fallen-->
+            <div class="card-song">
+                <img src="Images/Resources/Fallen.jpg" alt="Watching Educational Videos" height="90px">
+                <h1>Fallen</h1>
+
+                <audio controls>
+                    <source src="Images/Resources/Fallen (Live at The Cozy Cove) - Lola Amour.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+
+            <!--Bury the Light-->
+            <div class="card-song">
+                <img src="Images/Resources/Bury the Light.jpg" alt="Watching Educational Videos" height="90px">
+                <h1>Bury the Light</h1>
+
+                <audio controls>
+                    <source src="Images/Resources/Bury the Light - Vergil's battle theme from Devil May Cry 5 Special Edition.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+        </div>
+
+        <h1>Favourite Movies/Series</h1>
+        <div class="video-player">
+            <!--Severance-->
+            <div class="card-films">
+                
+                <video width="320" height="240" controls>
+                    <source src="Images/Resources/Severance — Official Trailer _ Apple TV .mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <h1>Severance</h1>
+           </div>
+
+           <!--Kairos-->
+           <div class="card-films">
+                <video width="320" height="240" controls>
+                    <source src="Images/Resources/Kairos.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <h1>Kairos</h1>
+            </div>
+
+            <!--Death's Game-->
+            <div class="card-films">
+                <video width="320" height="240" controls>
+                    <source src="Images/Resources/Death's Game.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <h1>Death's Game</h1>
+            </div>
+
+            <!--Extraordinary Attorney Woo-->
+            <div class="card-films">
+                <video width="320" height="240" controls>
+                    <source src="Images/Resources/Attorney Woo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <h1>Attorney Woo</h1>
+            </div>
+
+            <!--Kingdom-->
+            <div class="card-films">
+                <video width="320" height="240" controls>
+                    <source src="Images/Resources/Kingdom.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <h1>Kingdom</h1>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <script>
+        
+
+
+        // Subnavbar logic
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const subNavbar = document.getElementById("subNavbar");
+
+        const subSections = {
+            lectures: document.getElementById("lectureLinks"),
+            prelims: document.getElementById("prelimsLinks"),
+            midterms: document.getElementById("midtermsLinks"),
+            finals: document.getElementById("finalsLinks")
+        };
+
+        // Hide all subsections initially
+        Object.values(subSections).forEach(section => section.style.display = "none");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                // ✅ Make sure we're in desktop view
+                if (window.innerWidth <= 920) return;
+
+                navLinks.forEach(navLink => navLink.classList.remove("active"));
+                link.classList.add("active");
+
+                const selected = link.textContent.toLowerCase();
+
+                // Toggle logic
+                if (subNavbar.classList.contains("show") && selected.includes(subNavbar.dataset.selected)) {
+                    subNavbar.classList.remove("show");
+
+                    // ❗ Remove active highlight when toggling the same section closed
+                    navLinks.forEach(navLink => navLink.classList.remove("active"));
+                    return;
+                }
+
+
+                subNavbar.classList.add("show");
+                subNavbar.dataset.selected = selected;
+
+                Object.values(subSections).forEach(section => section.style.display = "none");
+
+                if (selected.includes("lecture")) {
+                    subSections.lectures.style.display = "block";
+                } else if (selected.includes("prelims")) {
+                    subSections.prelims.style.display = "block";
+                } else if (selected.includes("midterms")) {
+                    subSections.midterms.style.display = "block";
+                } else if (selected.includes("finals")) {
+                    subSections.finals.style.display = "block";
+                } else {
+                    subNavbar.classList.remove("show");
+                }
+            });
+        });
+
+        // Close subNavbar if clicked outside
+        document.addEventListener("click", (e) => {
+            if (!subNavbar.contains(e.target) && !e.target.closest(".nav-links")) {
+                subNavbar.classList.remove("show");
+
+                // ❗ Remove highlight from all nav links
+                navLinks.forEach(navLink => navLink.classList.remove("active"));
+            }
+        });
+
+
+
+        // === Mobile Sidebar Toggle ===
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const mobileHamburger = document.getElementById('mobileHamburger');
+        const sidebarClose = document.getElementById('sidebarClose');
+
+        // Open sidebar
+        mobileHamburger.addEventListener('click', () => {
+            mobileSidebar.classList.add('show'); // Show sidebar
+            mobileHamburger.style.display = 'none'; // Hide hamburger
+        });
+
+        // Close sidebar
+        sidebarClose.addEventListener('click', () => {
+            mobileSidebar.classList.remove('show'); // Hide sidebar
+            mobileHamburger.style.display = 'block'; // Show hamburger again
+        });
+
+        // Close sidebar by clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth > 920) return; // Prevent on desktop
+
+            if (!mobileSidebar.contains(e.target) && !mobileHamburger.contains(e.target)) {
+                mobileSidebar.classList.remove('show');
+                mobileHamburger.style.display = 'block';
+            }
+        });
+
+        // Handle window resizing for mobile/desktop view
+    
+        window.addEventListener("resize", () => {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth > 920) {
+                mobileSidebar.classList.remove("show"); // Close sidebar on desktop
+                mobileHamburger.style.display = 'none'; // Hide hamburger on desktop view
+
+                // ✅ Close sub navbar on desktop when resizing
+                subNavbar.classList.remove("show");
+
+                // ✅ Remove the active class from all primary navbar links
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                });
+            } else {
+                if (mobileSidebar.classList.contains("show")) {
+                    mobileHamburger.style.display = 'none'; // Hide hamburger when sidebar is open
+                } else {
+                    mobileHamburger.style.display = 'block'; // Show hamburger when sidebar is closed
+                }
+
+                // ✅ Close sub navbar on mobile
+                subNavbar.classList.remove("show");
+            }
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

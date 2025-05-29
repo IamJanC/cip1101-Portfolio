@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap');
+
+/* === vvv Global Stuff vvv === */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Main content */
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Section control */
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+/* Hover effect for tables */
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+/* === ^^^ Global Stuff ^^^ === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === vvv Sidebar vvv === */
+
+.sidebar {
+  background-color: #323740 !important;
+  color: #3b3f5c;
+  width: 300px;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  color: #f9faff;
+  position: fixed;
+  z-index: 2000;
+  height: 100vh;
+}
+
+.main{
+  margin-left: 300px;
+}
+
+
+.sidebar-header {
+  background-color: #323740 !important;
+  padding: 0.75rem 1rem;
+  border-bottom: none;
+}
+
+.head-title {
+  font-family: "Euphoria Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+}
+
+
+.navigation-title {
+  margin-top: 20px;
+}
+
+
+.navigation-title h6 {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #f9faff !important; /* Tailwind’s gray-500 for muted text */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+}
+
+.sidebar ul li a {
+  color: #f9faff !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li span {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.fa-credit-card, .fa-user{
+  margin-right: 8px;
+}
+
+.hover-highlight:hover {
+  background-color: rgb(69, 77, 90) ;
+  border-left: 4px solid #7d7ff7;
+  cursor: pointer;
+}
+
+/* Hamburger styles - only on mobile */
+.hamburger {
+  background-color: rgba(0, 0, 0, 0.788);
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-size: 24px;
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  position: fixed;
+}
+
+.hamburger:hover{
+  background-color: rgba(0, 0, 0, 0.911);
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .main{
+    margin-left: 0;
+  }
+}
+
+/* === ^^^ Sidebar ^^^ === */
+
+
+
+.module-header{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === vvv Room Module vvv === */
+
+ #room-grid .card {
+    min-height: 180px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #room-grid .card:hover {
+    transform: scale(1.03);
+  }
+
+  .room-badge {
+    font-size: 15px;
+    padding: 5.6px 9.6px;
+    content: center;
+    margin-top: 0.5rem;
+    align-items: center; 
+  }
+
+  #room-grid .card {
+  min-height: 180px;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#room-grid .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.room-badge {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  margin-top: 0.5rem;
+  align-self: center;
+}
+
+
+  @media (max-width: 576px) {
+    #room-grid .col-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    #room-grid .col-sm-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+  }
+
+  @media (min-width: 769px) {
+    #room-grid .col-md-2 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+
+/* === ^^^ Room Module ^^^ === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === vvv Transaction Module vvv === */
+
+/* Hotel Performance */ 
+.parent-container{
+  /* visualization, will remove soon */
+
+  max-width: 100%;  /* or 100% */
+  margin: auto;
+
+}
+
+.card.no-shadow {
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+
+
+
+/* Financial Summary */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-last-md {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+#calendarBody td {
+  border: none !important; /* Remove cell borders */
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#calendarBody td:hover {
+  background-color: rgb(167, 166, 166);
+}
+
+#today {
+  background-color: #3b3f5c;
+}
+
+#calendarBody tr {
+  height: 40px; /* consistent row height */
+}
+
+#calendarBody td:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+/* === ^^^ Transaction Module ^^^ === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === vvv User Module vvv === */
+#calendarBody2 td {
+  border: none !important; /* Remove cell borders */
+  padding: 0.5rem;
+}
+
+#calendarBody2 tr {
+  height: 40px; /* consistent row height */
+}
+
+#calendarBody2 td:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+/* === ^^^ User Module ^^^ === */
+

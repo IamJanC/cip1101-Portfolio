@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Lexend+Tera:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #1c1c20;
+
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px 10px 25px; /* Adjust padding as needed */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px; /* Adjust spacing between links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+nav #current{
+    color: rgb(206, 62, 62);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ddd5d5;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(202, 127, 127);
+}
+
+nav h1{
+    font-family: "Gaegu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ddd5d5;
+}
+
+nav span{
+    color: rgb(206, 62, 62);
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#Banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Keeps them near but not fully apart */
+    background-color: black; /* Example for Black Friday theme */
+    color: white;
+    padding: 50px;
+}
+
+#Banner h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+    font-family: "Lexend Tera", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #ddd5d5;
+}
+
+#Banner h1 span {
+    color: rgb(206, 62, 62); 
+}
+
+#Banner h2, h3 {
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #ddd5d5;
+}
+
+
+
+#Banner .banner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between text and button */
+}
+
+#Banner button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#Banner .banner-right {
+    text-align: center; /* Centers the text below the image */
+}
+
+#Banner img {
+    max-width: 500px; /* Adjust size */
+    display: block;
+    margin: 0 auto;
+}
+
+#Banner h2 {
+    margin: 10px 0 0;
+    font-size: 24px;
+}
+
+#Banner h2 del {
+    color: gray;
+    font-size: 20px;
+}
+
+#Banner .btn {
+    display: inline-block;
+    width: 200px;  
+    height: 30px;
+    line-height: 30px; 
+    text-align: center; 
+    background-color: rgb(206, 62, 62);
+    color: #ddd5d5;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; 
+    font-family: "Lexend Tera", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    transition: 0.3s ease-in-out;
+}
+
+#Banner .btn:hover {
+    background-color: rgb(141, 48, 48);
+}
+
+
+
+/* Header */
+
+
+
+/* Category Section */
+.category {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.category h1, h4{
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #ddd5d5;
+}
+
+/* Item Container */
+.item-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Individual Items */
+.item {
+    width: 200px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Typography */
+h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: black;
+}
+
+del {
+    font-size: 14px;
+    color: gray;
+}
+
+h6 {
+    font-size: 12px;
+    color: black;
+}
+
+/* See More Button */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: rgb(206, 62, 62);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+
+    text-align: center; 
+    text-decoration: none;
+
+    cursor: pointer;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.btn:hover {
+    background-color: rgb(141, 48, 48);
+}
+
+.disabled-link {
+    pointer-events: none;
+    color: gray; /* Make it look disabled */
+    text-decoration: none;
+    opacity: 0.6;
+}
