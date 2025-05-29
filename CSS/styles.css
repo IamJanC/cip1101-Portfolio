@@ -443,6 +443,10 @@ body {
     #AboutMeInformation {
         text-align: center; /* Center the text on smaller screens */
     }
+
+    .coursework{
+        text-align: left;
+    }
 }
 
 #SkillsHobbiesContainer {
